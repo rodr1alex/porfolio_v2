@@ -21,6 +21,7 @@ export class ContactFormComponent {
     this.contactService.sendMessage(this.message).subscribe(
       {
         next: response =>{
+          this.message = new Message();
           alert(response.response)
         }
       }
