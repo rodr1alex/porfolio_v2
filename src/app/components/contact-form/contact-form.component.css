@@ -75,7 +75,7 @@
     cursor: pointer;
 }
 .button--disabled{
-    @apply text-sm text-center font-bold p-1 px-6 rounded-full transition duration-100 transform active:bg-gray-500;
+    @apply text-sm text-center font-bold p-1 px-6 rounded-full transition duration-100 transform;
     background-color: rgba(255, 255, 255, 0.05); 
     color: rgba(185, 183, 197, 0.092);
 }

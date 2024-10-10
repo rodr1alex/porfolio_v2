@@ -14,16 +14,8 @@
     transition: box-shadow 0.3s ease;
 }
 .icon:hover .aura{
-    box-shadow: 0 0 20px 20px rgba(100, 105, 113, 0.6);
+    box-shadow: 0 0 20px 20px rgba(228, 232, 238, 0.6);
 }
 .icon:hover{
     color: white;
-}
-
-.presentation-card{
-    border: 1px solid var(--grey1);
-    background-color: var(--black2); 
-}
-li{
-    list-style: inside;
 }

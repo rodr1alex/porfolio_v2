@@ -11,9 +11,12 @@
     --blue1: rgb(27, 79, 99);
     --blue2: rgb(62, 167, 208);
     --neon: rgb(44, 170, 220);
+    --yellow1: #D8AA2C;
 }
+
 html{
     background-color: var(--black1);
+    scroll-behavior: smooth;
 }
 .bg-grey1{
     background-color: var(--grey1);
@@ -45,6 +48,9 @@ html{
 }
 .text-blue2{
     color: var(--blue2);
+}
+.text-yellow2{
+    color: var(--yellow1);
 }
 
 .limit-content{
@@ -86,10 +92,21 @@ html{
     padding-bottom: 12rem;
 }
 .margin-botom-tittle{
+    padding-top: 10rem;
     margin-bottom: 1rem;
 }
 
 
+
+.desktop{
+    display: none;
+}
+
+@media (min-width: 900px) {
+    .desktop{
+      display: block;
+    }
+}
 
 
 
