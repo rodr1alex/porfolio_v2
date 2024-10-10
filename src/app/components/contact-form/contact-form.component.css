@@ -73,9 +73,26 @@
     box-shadow: 0 0 5px 5px rgba(100, 105, 113, 0.6);
     background-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
+    color: white;
+    text-shadow: 
+        0 0 5px white;
 }
 .button--disabled{
     @apply text-sm text-center font-bold p-1 px-6 rounded-full transition duration-100 transform;
     background-color: rgba(255, 255, 255, 0.05); 
     color: rgba(185, 183, 197, 0.092);
 }
+.button--disabled:hover{
+    @apply text-sm text-center font-bold p-1 px-6 rounded-full transition duration-100 transform;
+    background-color: rgba(255, 255, 255, 0.05); 
+    color: rgba(185, 183, 197, 0.092);
+    box-shadow: none;
+    cursor: default;
+    text-shadow: none;
+}
+
+/* .button:hover .link{
+    color: white;
+    text-shadow: 
+        0 0 5px white;
+} */

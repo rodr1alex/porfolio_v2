@@ -66,9 +66,9 @@
         </ul>
        
         <button 
-            class="button--disabled px-4"
+            class="button px-4"
             (click)="sendMessage(contactForm)" 
             [disabled]="(contactForm.invalid)"
-            >Enviar</button>
+            [ngClass]="{'button--disabled': (contactForm.invalid)}">Enviar</button>
      </form>
 </section>
