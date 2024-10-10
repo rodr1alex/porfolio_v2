@@ -1,0 +1,46 @@
+<article class="project-card card-1 text-card-content flex flex-col md:flex-row w-11/12 mx-auto md:w-full relative" #projectCard>
+
+    <div class="description flex flex-col px-4 pt-6 pb-2 md:py-4 justify-start flex-grow" >
+        <div class="mb-8 flex-grow">
+            <h3 class="text-card-tittle mb-2">{{proyect.name}}</h3>
+            @for(text of proyect.description.split('.'); track $index){
+                <p class="text-card-content mb-2">{{text}}</p>
+            }
+        </div>
+        <div class="flex flex-wrap justify-center md:justify-start">
+            @for (skill of proyect.skills; track $index) {
+                <div class="card-1  rounded-full px-1 md:px-2 h-5  flex justify-center items-center mr-2 mb-2 ">
+                    <p class="text-sm md:text-xs">{{skill}}</p>
+                </div>
+            }
+        </div>
+        <div class="flex self-center mt-2">
+            <a class="flex flex-col-reverse items-center md:mx-2 proyect-link md:flex-row" href="{{proyect.webUrl}}" target="_blank">
+                <p class="text-grey1 text-xs font-bold mr-1 link">Ver proyecto</p>
+                <i class="text-grey1 fa-brands fa-safari text-xl icon" style="line-height: 0.75">
+                    <div class="aura"></div>
+                </i>
+            </a>
+            <a class="flex flex-col-reverse items-center md:mx-2 proyect-link md:flex-row" href="{{proyect.githubUrl}}" target="_blank">
+                <p class="text-grey1 text-xs font-bold mr-1 link" >Ver código</p>
+                <i class="text-grey1 fa-brands fa-github text-xl icon" style="line-height: 0.75">
+                    <div class="aura"></div>
+                </i>
+            </a>                       
+        </div>
+    </div>
+
+    <div class="carousel" (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)">
+        <div class="carousel__slide " id={{proyect.name}}>
+            @for (img of proyect.images; track $index) {
+                <img src="{{img}}" class="carousel__img" >
+            }
+        </div>
+        <div class="carousel__layer  absolute top-0"></div>
+        <div class="absolute top-0 flex w-full h-full justify-center items-end p-4">
+            <button class="carousel__button carousel__button--prev" (click)="previousImage()">❮</button>
+            <button class="carousel__button carousel__button--next" (click)="nextImage()">❯</button>
+        </div>
+    </div>
+
+</article>

@@ -1,0 +1,74 @@
+<section class="limit-content contact-form-container padding-botom-section" id="contact">
+
+    <p class="text-section-tittle font-bold">Contacto</p>
+     <form 
+        #contactForm="ngForm"
+        class="card-1 w-11/12 md:w-4/5 mx-auto h-96 flex flex-col items-center justify-around p-8 " >
+        <ul class="w-full">
+            <li class="input-group">
+                <label class="placeholder">Nombre</label>
+                <input 
+                    name="name"
+                    [(ngModel)]="message.name"
+                    class="input"
+                    #name="ngModel" 
+                    required>
+                
+                @if (name.invalid && (name.dirty || name.touched)) {
+                    @if(name.errors!['required']){
+                        <div class="input-error">
+                            Requerido
+                        </div>
+                        }
+                    }
+            </li>
+            <li class="input-group">
+                <label class="placeholder">Correo</label>
+                <input 
+                    name="email"
+                    [(ngModel)]="message.email"
+                    class="input"
+                    #email="ngModel" 
+                    required
+                    email>
+                
+                @if (email.invalid && (email.dirty || email.touched)) {
+                    @if(email.errors!['required']){
+                        <div class="input-error">
+                            Requerido
+                        </div>
+                        }
+                    @if(email.errors!['email']){
+                            <div class="input-error input-error--soft">
+                                Debe ser un correo
+                            </div>
+                        }
+                    }
+            </li>
+            <li class="input-group input-group--area" style="height: 150px;">
+                <label class="placeholder placeholder--area">Mensaje</label>
+                <textarea 
+                    name="content"
+                    [(ngModel)]="message.content"
+                    class="input input--area"
+                    #content="ngModel" 
+                    required
+                    style="height: 120px;">
+                </textarea>
+                @if (content.invalid && (content.dirty || content.touched)) {
+                    @if(content.errors!['required']){
+                        <div class="input-error input-error--area">
+                            Requerido
+                        </div>
+                        }
+                    }
+            </li>
+        </ul>
+       
+        <button 
+            class="button--disabled px-4"
+            (click)="sendMessage(contactForm)" 
+            [disabled]="(contactForm.invalid)"
+            >Enviar</button>
+     </form>
+</section>

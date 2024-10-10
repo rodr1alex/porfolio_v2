@@ -1,1 +1,158 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root{
+    --grey1: rgb(185, 183, 197);
+    --black1: rgb(13, 15, 26);
+    --purple1: rgb(55, 21, 51);
+    --blue1: rgb(27, 79, 99);
+    --blue2: rgb(62, 167, 208);
+    --neon: rgb(44, 170, 220);
+}
+html{
+    background-color: var(--black1);
+}
+.bg-grey1{
+    background-color: var(--grey1);
+}
+.bg-black1{
+    background-color: var(--black1);
+}
+.bg-purple1{
+    background-color: var(--purple1);
+}
+.bg-blue1{
+    background-color: var(--blue1);
+}
+.bg-blue2{
+    background-color: var(--blue2);
+}
+
+.text-grey1{
+    color: var(--grey1);
+}
+.text-black1{
+    color: var(--black1);
+}
+.text-purple1{
+    color: var(--purple1);
+}
+.text-blue1{
+    color: var(--blue1);
+}
+.text-blue2{
+    color: var(--blue2);
+}
+
+.limit-content{
+    max-width: 700px;
+    margin: 0 auto;
+}
+.limit-content2{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+.text-section-tittle{
+    @apply text-4xl font-bold text-center mb-6;
+    color: var(--grey1);
+}
+.text-card-tittle{
+    @apply font-bold;
+    color: var(--blue2);
+}
+.text-card-content{
+    @apply text-sm;
+    color: var(--grey1);
+}
+
+
+.card-1{
+    border-radius: 2rem;
+    background-color: rgba(255, 255, 255, 0.05); 
+    border: 1px solid rgba(233, 233, 233, 0.1);
+}
+
+.card-2{
+    @apply rounded-2xl;
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+.padding-botom-section{
+    padding-bottom: 12rem;
+}
+.margin-botom-tittle{
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+/* ESTO ES DEL EFECTO DEL BORDE GIRATORIO... EN DESARROLLO.... */
+
+.efect-card-container {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.efect-card-container::before {
+    content: "";
+    position: absolute;
+    height: 800px;
+    width: 800px;
+    background-image: conic-gradient(#9300e2 10deg, transparent 90deg);
+    animation: rotar 6s linear infinite;
+    opacity: 0;
+    transition: opacity 0.1s linear;
+}
+
+.efect-card-container:hover::before {
+    opacity: 1; 
+    transition: opacity 0.3s ease-in;
+}
+
+@keyframes rotar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.efect-card-container::after{
+    content: "";
+    position: absolute;
+    height: 99%;
+    width: 99%;
+    background-color: transparent;
+    border-radius: 1rem;
+    transition: all 0.9s ease-in;
+}
+.efect-card-container:hover:after{
+    background-color: var(--black1);
+    transition: all 0.1s ease-in;
+}
+.efect-card{
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.05); 
+    border: 1px solid rgba(233, 233, 233, 0.1);
+    transition: all 0.1s ease-in;
+    z-index: 10;
+}
+/* .efect-card:hover{
+    background-color: transparent;
+} */

@@ -1,0 +1,36 @@
+.about{
+    background: radial-gradient(ellipse closest-side,var(--purple1), var(--black1) 80%);
+}
+.content{
+    
+}
+
+.icon{
+    color: var(--grey1);
+    margin: 0 0.6rem;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.aura{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    transition: box-shadow 0.3s ease;
+}
+.icon:hover .aura{
+    box-shadow: 0 0 20px 20px rgba(228, 232, 238, 0.6);
+}
+.icon:hover{
+    color: white;
+}
+
+.presentation-card{
+    border: 1px solid var(--grey1);
+    background-color: var(--black2); 
+}
+li{
+    list-style: inside;
+}

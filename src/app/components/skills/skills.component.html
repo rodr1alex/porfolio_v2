@@ -1,0 +1,36 @@
+<div class="limit-content padding-botom-section">
+    <p class="text-section-tittle">Conocimientos</p>
+    <div class="skills-container">
+        <p class="text-card-tittle text-center">Frontend</p>
+        <div class="flex flex-wrap justify-center">
+            @for (skill of frontSkills; track $index) {
+                <div class="icon-container flex flex-col justify-center items-center">
+                    <img class="icon" src="{{skill.SvgURL}}" alt="">
+                    <p class="neon-text">{{skill.skillName}}</p>
+                </div>  
+            }  
+        </div>
+    </div>
+    <div class="skills-container">
+        <p class="text-card-tittle text-center">Backend</p>
+        <div class="flex flex-wrap justify-center">
+            @for (skill of backSkills; track $index) {
+                <div class="icon-container flex flex-col justify-center items-center">
+                    <img class="icon" src="{{skill.SvgURL}}" alt="">
+                    <p class="neon-text">{{skill.skillName}}</p>
+                </div>  
+            }  
+        </div>
+    </div>
+    <div class="skills-container">
+        <p class="text-card-tittle text-center">Frontend</p>
+        <div class="flex flex-wrap justify-center">
+            @for (skill of generalSkills; track $index) {
+                <div class="icon-container flex flex-col justify-center items-center">
+                    <img class="icon" src="{{skill.SvgURL}}" alt="">
+                    <p class="neon-text">{{skill.skillName}}</p>
+                </div>  
+            }  
+        </div>
+    </div>
+</div>

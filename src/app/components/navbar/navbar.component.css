@@ -1,0 +1,45 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+    background-color: rgba(13, 15, 26, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(10px); 
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%; 
+    background-color: var(--white-off); 
+    position: absolute;
+    top: 56px;
+    right: -500px;
+    transition: ease-in 0.1s; 
+}
+.menu li{
+    margin: 1rem;
+}
+.menu-item{
+    
+}
+.menu-item:hover{
+    color: var(--blue2);
+}
+
+.menu-visible{
+    right: 0;
+}
+
+@media (min-width: 900px) {
+    .menu{
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        position: static;
+    }
+}

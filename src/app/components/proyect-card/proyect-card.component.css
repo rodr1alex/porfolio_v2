@@ -1,0 +1,121 @@
+.project-card{
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+    min-height: 600px;
+}
+.carousel {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+.carousel__slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel__img {
+    height: 100%;
+}
+.carousel__layer{
+    background: linear-gradient(to bottom, var(--dark), transparent);
+    width: 100%;
+    height: 1%;
+    z-index: 20;  
+}
+.carousel__button {
+   display: none;
+}
+.carousel__button--prev {
+    margin-right: 2rem;
+}
+.carousel__button--next {
+    margin-left: 2rem;
+}
+
+.carousel:hover  .carousel__button{
+    opacity: 100;
+}
+
+
+
+@media (min-width: 900px) {
+    .project-card{
+        height: 20rem;
+        min-height: 00px;
+    }
+    .description{
+        width: 48%;
+    }
+    .carousel{
+        width: 52%;
+    }
+    .carousel__layer{
+        background: linear-gradient(to right, var(--dark), transparent);
+        width: 25%;
+        height: 100%;
+        z-index: 20;  
+        transition: ease 0.3s; 
+    }
+    .carousel:hover .carousel__layer{
+        width: 3%;
+    }
+    .carousel__button {
+        display: inline;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border-radius: 1rem;
+        height: 2rem;
+        width: 4rem;
+        padding: 1px;
+        cursor: pointer;
+        opacity: 0;
+        transition: ease 0.3s;
+    }
+    .carousel__button--prev {
+        margin-right: 2rem;
+    }
+    .carousel__button--next {
+        margin-left: 2rem;
+    }
+    
+    .carousel:hover  .carousel__button{
+        opacity: 100;
+    }
+    .carousel__img{
+        mask-image: linear-gradient(to left, black 99%, transparent);
+    }
+}
+
+
+
+
+.proyect-link:hover .link{
+    color: white;
+    text-shadow: 
+        0 0 5px white;
+}
+.proyect-link:hover .icon{
+    color: white;
+    text-shadow: 
+    0 0 5px white;
+  
+}
+/* .proyect-link:hover .aura{
+    box-shadow: 0 0 10px 10px rgba(100, 105, 113, 0.6);
+} */
+.link{
+    transition: all 0.3s ease;
+}
+.icon{
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+.aura{
+    position: absolute;
+    transition: box-shadow 0.3s ease;
+    top: 0.5rem;
+    left: 0.5rem;
+}
