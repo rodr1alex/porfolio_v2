@@ -12,7 +12,7 @@
     --blue2: rgb(62, 167, 208);
     --neon: rgb(44, 170, 220);
     --yellow1: #D8AA2C;
-    --test1: rgb(212, 210, 216);
+    --white1: rgb(220, 225, 226);
 }
 
 html{
@@ -87,6 +87,12 @@ html{
 .card-2{
     @apply rounded-2xl;
     background-color: rgba(255, 255, 255, 0.1); 
+}
+
+.card-3{
+    border-radius: 1rem;
+    background-color: rgba(55, 55, 55, 0.05); 
+    border: 1px solid rgba(233, 233, 233, 0.1);
 }
 
 .padding-botom-section{
@@ -176,9 +182,9 @@ html{
 
 .text-section-neon {
   
-    color: var(--test1); 
+    color: var(--white1); 
     text-shadow: 
-        0 0 12px var(--test1);
+        0 0 12px var(--white1);
 
     
     /* text-shadow: 
