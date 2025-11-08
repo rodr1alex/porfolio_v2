@@ -1,11 +1,8 @@
 <div class="about bg-black1 py-28 pb-48" id="about">
     <div class="limit-content content">
         <div class="mb-32 px-8">
-            <p class="text-4xl font-bold text-grey1 text-center mb-2">Rodrigo Ayelef</p>
-            <p class="text-2xl font-bold text-blue2 text-center mb-2">FullStack Develper Angular & SpringBoot</p>
-            <!-- <p class="text-grey1 text-center">
-                Experto en tecnologias reconocidas por su estabilidad y fiabilidad.
-            </p> -->
+            <p class="text-4xl font-bold text-grey1 text-center mb-2 text-section-neon">Rodrigo Ayelef</p>
+            <p class="text-2xl font-bold text-blue2 text-center mb-2 neon-text">FullStack Develper Angular & SpringBoot</p>
         </div>
         <div class="flex">
             <div class="w-2/5 px-8">
@@ -13,13 +10,18 @@
             </div>
             <div class="w-3/5 flex flex-col justify-center items-center">
                 <div class="flex mb-8">
-                    <a href="https://linkedin.com/in/rodrigo-ayelef" target="_blank">
+                    <a href="https://linkedin.com/in/rodrigo-ayelef" target="_blank" title="Ver perfil de LinkedIn">
                         <i class="fa-brands fa-linkedin-in icon"><div class="aura"></div></i>
                     </a>
-                    <a href="https://github.com/rodr1alex" target="_blank">
+                    <a href="https://github.com/rodr1alex" target="_blank" title="Ver perfil de GitHub">
                         <i class="fa-brands fa-github icon"><div class="aura"></div></i>
                     </a>
-                    <i class="fa-brands fa-x-twitter icon"><div class="aura"></div></i>
+                    
+                    <a target="_blank" title="Ver CV" (click)="abrirModalCV()">
+                        <i class="fa-solid fa-file icon"><div class="aura"></div></i>
+                    </a>
+                  
+                    
                 </div>
                 <div class="card-1 w-11/12 md:w-full px-4 py-6 rounded-2xl">
                     <p class="text-card-content">
